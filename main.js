@@ -22,52 +22,40 @@ let curr_track = document.createElement('audio');
 // Define the tracks that have to be played
 let track_list = [
   {
-    name: "I Wanna Be Someone to Someone",
-    artist: "Unknown",
-    image: "https://cdn.discordapp.com/attachments/883312487288672266/885610429043335168/download.jpg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
-    path: "https://cdn.discordapp.com/attachments/883312487288672266/885609947067461652/y2mate.com_-_I_Wanna_Be_Somebody_to_Someone.mp3"
+    name: "Con te Partiro",
+    artist: "Ludig",
+    image: "Music/Covers/ludwig.jpg",
+    path: "Music/Ludwig - Con te partiro.mp3"
   },
   {
-    name: "Everything Sucks",
-    artist: "Vaultboy",
-    image: "https://mysonglyrics.net/wp-content/uploads/2021/06/Xi1SmdBvJ5U-HD.jpg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
-    path: "https://cdn.discordapp.com/attachments/883312487288672266/885609910858039357/y2mate.com_-_vaultboy_everything_sucks_Official_Lyric_Video.mp3"
+    name: "Bella Ciao",
+    artist: "El Profesor",
+    image: "Music/Covers/BellaCiao.jpg",
+    path: "Music/bella ciao.mp3"
   },
   {
-    name: "Aibek Berkimbaev",
-    artist: "Rauf & Faik",
-    image: "https://images.genius.com/edb3fc3a1551d9b54a1023b074d99ce3.1000x1000x1.jpg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
-    path: "https://cdn.discordapp.com/attachments/883312487288672266/883312934263062568/y2mate.com_-_Rauf_Faik_Aibek_Berkimbaev_Remix_EDITED.wav"
+    name: "Islands (kompa pasión)",
+    artist: "Tomo, Frozy",
+    image: "Music/Covers/islands.jpg",
+    path: "Music/islands.mp3"
   },
   {
-    name: "Im Not Pretty",
-    artist: "Jessia",
-    image: "https://ukutabs.com/artistimg/JESSIA.jpg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
-    path: "https://cdn.discordapp.com/attachments/883312487288672266/885611423215009802/y2mate.com_-_JESSIA_Im_Not_Pretty_Lyrics.mp3"
+    name: "Snowfall",
+    artist: "øneheart x reidenshi",
+    image: "Music/Covers/snowfall.jpeg",
+    path: "Music/snowfall.mp3"
   },
   {
-    name: "Only Human",
-    artist: "Jonas Brothers",
-    image: "https://www.rollingstone.com/wp-content/uploads/2019/03/1.jpg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
-    path: "https://cdn.discordapp.com/attachments/883312487288672266/883313607822151740/pog.wav"
+    name: "Ransom",
+    artist: "Lil Tecca",
+    image: "Music/Covers/ransom.jpeg",
+    path: "Music/Ransom.mp3"
   },
   {
-    name: "Rubberband",
-    artist: "Tate McRae",
-    image: "https://etcanada.com/wp-content/uploads/2021/01/Tate-McRae-Rubber-Band-Single-Art-1.jpg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
-    path: "https://cdn.discordapp.com/attachments/883312487288672266/885608542864805928/y2mate.com_-_Tate_McRae_rubberband_Official_Video.mp3",
-  },
-  {
-    name: "Mad at Disney",
-    artist: "Salem ilese",
-    image: "https://lastfm.freetls.fastly.net/i/u/ar0/444be70a7a126bdd3bc252d143ac4396.jpg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
-    path: "https://cdn.discordapp.com/attachments/883312487288672266/885611428864725002/y2mate.com_-_Mad_at_Disney_salem_ilese_Lyrics_.mp3"
-  },
-  {
-    name: "F**k Boy",
-    artist: "Dixie Damelio",
-    image: "https://www.thefamouspeople.com/profiles/images/dixie-damelio-2.jpg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
-    path: "https://cdn.discordapp.com/attachments/883312487288672266/885611428323659776/y2mate.com_-_Dixie_DAmelio_FBOY_Lyrics.mp3"
+    name: "Savage Love",
+    artist: "Jason Derulo",
+    image: "Music/Covers/savage-love.jpeg",
+    path: "Music/Savage Love.mp3"
   },
 ];
 
@@ -90,11 +78,15 @@ function loadTrack(track_index) {
   resetValues();
   curr_track.src = track_list[track_index].path;
   curr_track.load();
+  curr_track.volume = 0.1;  
+  volume_slider.value = 10; 
 
   track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
   track_name.textContent = track_list[track_index].name;
   track_artist.textContent = track_list[track_index].artist;
   now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
+
+  
 
   updateTimer = setInterval(seekUpdate, 1000);
   curr_track.addEventListener("ended", nextTrack);
