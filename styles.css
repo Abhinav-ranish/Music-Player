@@ -1,200 +1,114 @@
+/* General body styling for a minimal background */
 body {
-    background-color: lightgreen;
-    
-    /* Smoothly transition the background color */
-    transition: background-color .5s;
-    }
-    
-    /* Using flex with the column direction to
-    align items in a vertical direction */
-    .player {
-    height: 95vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    }
-    
-    .details {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 25px;
-    }
-    
-    .track-art {
-    margin: 25px;
-    height: 250px;
-    width: 250px;
-    background-image: URL(
-        "https://source.unsplash.com/Qrspubmx6kE/640x360");
-    background-size: cover;
-    background-position: center;
-    border-radius: 15%;
-    }
-    
-    /* Changing the font sizes to suitable ones */
-    .now-playing {
-    font-size: 1rem;
-    }
-    
-    .track-name {
-    font-size: 3rem;
-    }
-    
-    .track-artist {
-    font-size: 1.5rem;
-    }
-    
-    /* Using flex with the row direction to
-    align items in a horizontal direction */
-    .buttons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    }
-    
-    .playpause-track,
-    .prev-track,
-    .next-track {
-    padding: 25px;
-    opacity: 0.8;
-    
-    /* Smoothly transition the opacity */
-    transition: opacity .2s;
-    }
-    
-    /* Change the opacity when mouse is hovered */
-    .playpause-track:hover,
-    .prev-track:hover,
-    .next-track:hover {
-    opacity: 1.0;
-    }
-    
-    /* Define the slider width so that it scales properly */
-    .slider_container {
-    width: 75%;
-    max-width: 400px;
+    background-color: #121212;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    }
-    
-    /* Modify the appearance of the slider */
-    .seek_slider, .volume_slider {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    height: 5px;
-    background: black;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-    }
-    
-    /* Modify the appearance of the slider thumb */
-    .seek_slider::-webkit-slider-thumb,
-    .volume_slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width: 15px;
-    height: 15px;
-    background: white;
-    cursor: pointer;
-    border-radius: 50%;
-    }
-    
-    /* Change the opacity when mouse is hovered */
-    .seek_slider:hover,
-    .volume_slider:hover {
-    opacity: 1.0;
-    }
-    
-    .seek_slider {
-    width: 60%;
-    }
-    
-    .volume_slider {
-    width: 30%;
-    }
-    
-    .current-time,
-    .total-duration {
-    padding: 10px;
-    }
-    
-    i.fa-volume-down,
-    i.fa-volume-up {
-    padding: 10px;
-    }
-    
-    /* Change the mouse cursor to a pointer
-    when hovered over */
-    i.fa-play-circle,
-    i.fa-pause-circle,
-    i.fa-step-forward,
-    i.fa-step-backward {
-    cursor: pointer;
-    }
-    
-    /* Mini Player specific styles */
+    height: 100vh;
+}
+
+/* Mini Player container */
 .mini-player {
     display: flex;
     align-items: center;
     background-color: #1f1f1f;
     padding: 10px;
     border-radius: 10px;
-    width: 90%;
+    width: 100%;
     max-width: 500px;
     color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .track-art {
+}
+
+/* Track art styling - small and square */
+.track-art {
     width: 50px;
     height: 50px;
     border-radius: 5px;
     background-size: cover;
     background-position: center;
     margin-right: 10px;
-  }
-  
-  .track-info {
+}
+
+/* Track information with reduced font sizes */
+.track-info {
     flex-grow: 1;
-  }
-  
-  .track-name, .track-artist {
-    margin: 0;
+}
+
+.track-name {
     font-size: 0.9rem;
-  }
-  
-  .controls {
+    margin: 0;
+    color: #fff;
+}
+
+.track-artist {
+    font-size: 0.7rem;
+    margin: 0;
+    color: #888;
+}
+
+/* Controls - arranged in a row with minimal padding */
+.controls {
     display: flex;
-    gap: 5px;
+    gap: 10px;
     margin-right: 10px;
-  }
-  
-  .controls i {
+}
+
+.controls i {
+    font-size: 1.5rem;
     cursor: pointer;
     color: #1db954;
-  }
-  
-  .slider-container {
+}
+
+/* Slider container with minimal styling */
+.slider-container {
     display: flex;
     align-items: center;
-    width: 100px;
+    width: 150px;
     font-size: 0.8rem;
-  }
-  
-  .seek-slider {
-    width: 60px;
-    margin-right: 5px;
-    -webkit-appearance: none;
-    appearance: none;
+    margin-left: 10px;
+}
+
+.seek-slider {
+    width: 60%;
+    margin: 0 5px;
     background: #888;
     height: 3px;
+    -webkit-appearance: none;
+    appearance: none;
     outline: none;
-  }
-  
+}
+
+.seek-slider::-webkit-slider-thumb {
+    width: 10px;
+    height: 10px;
+    background: #1db954;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.volume-slider {
+    width: 40%;
+    background: #888;
+    height: 3px;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    margin: 0 5px;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    width: 10px;
+    height: 10px;
+    background: #1db954;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Current time and duration display */
+.current-time, .total-duration {
+    font-size: 0.7rem;
+    color: #888;
+    margin: 0 5px;
+}
