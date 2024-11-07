@@ -1,0 +1,34 @@
+<!-- miniplayer.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mini Music Player</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="mini-player">
+    <div class="track-art"></div>
+    <div class="track-info">
+      <div class="track-name">Track Name</div>
+      <div class="track-artist">Track Artist</div>
+    </div>
+    <div class="controls">
+      <div class="prev-track" onclick="prevTrack()">
+        <i class="fa fa-step-backward fa-2x"></i>
+      </div>
+      <div class="playpause-track" onclick="playpauseTrack()">
+        <i class="fa fa-play-circle fa-2x"></i>
+      </div>
+      <div class="next-track" onclick="nextTrack()">
+        <i class="fa fa-step-forward fa-2x"></i>
+      </div>
+    </div>
+    <div class="slider-container">
+      <input type="range" min="1" max="100" value="0" class="seek-slider" onchange="seekTo()">
+      <span class="current-time">00:00</span> / <span class="total-duration">00:00</span>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
