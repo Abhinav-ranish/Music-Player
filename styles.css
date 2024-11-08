@@ -8,6 +8,11 @@ body {
     height: 100vh;
 }
 
+a{
+    text-decoration: none;
+    color: #fff; /* Spotify Green */
+}
+
 /* Mini Player container */
 .mini-player {
     display: flex;
