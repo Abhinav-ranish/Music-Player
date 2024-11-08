@@ -61,16 +61,32 @@ function loadTrack(track_index) {
     resetValues();
     curr_track.src = track_list[track_index].path;
     curr_track.load();
+
     curr_track.volume = 0.1;  
 
     // Update track details
-    track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
-    track_name.textContent = track_list[track_index].name;
+    track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";    
+    let trackNameLink = track_name.querySelector("a");
+    if (trackNameLink) {
+        trackNameLink.textContent = track_list[track_index].name;
+        // Optionally update the href if it should be dynamic based on the track
+        trackNameLink.href = "https://music.aranish.codes"; // Modify this URL as needed
+    } else {
+        // If the <a> element does not exist, create it
+        track_name.innerHTML = '';
+        trackNameLink = document.createElement('a');
+        trackNameLink.href = "https://music.aranish.codes"; // Set the initial URL
+        trackNameLink.textContent = track_list[track_index].name;
+        trackNameLink.target = "_blank";
+        track_name.appendChild(trackNameLink);
+    }
+
     track_artist.textContent = track_list[track_index].artist;
 
     updateTimer = setInterval(updateTimeDisplay, 1000);
     curr_track.addEventListener("ended", nextTrack);
 }
+
 
 // Play or pause the track
 function playpauseTrack() {
