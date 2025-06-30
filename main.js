@@ -22,6 +22,42 @@ let curr_track = document.createElement('audio');
 // Define the tracks that have to be played
 let track_list = [
   {
+    name: "Wake Me Up",
+    artist: "Avicii",
+    image: "Music/Covers/wakemeup.png",
+    path: "Music/Wake Me Up.flac"
+  },
+  {
+    name: "Yeat",
+    artist: "Yeat",
+    image: "Music/Covers/yeat.jpg",
+    path: "Music/yeat.mp3"
+  },
+  {
+    name: "Alors On Danse",
+    artist: "Stromae",
+    image: "Music/Covers/alors.jpg",
+    path: "Music/Alors On Danse.flac"
+  },
+  {
+    name: "If We Being Real",
+    artist: "YoungBoy Never Broke Again",
+    image: "Music/Covers/skai.webp",
+    path: "Music/If We Being Real.flac"
+  },
+  {
+    name: "Radio",
+    artist: "Lana Del Rey",
+    image: "Music/Covers/lana.jpg",
+    path: "Music/Radio - Lana.flac"
+  },
+  {
+    name: "SKAI",
+    artist: "Unknown",
+    image: "Music/Covers/skai.webp",
+    path: "Music/SKAI.flac"
+  },
+  {
     name: "Con te Partiro",
     artist: "Ludig",
     image: "Music/Covers/ludwig.jpg",
@@ -78,15 +114,15 @@ function loadTrack(track_index) {
   resetValues();
   curr_track.src = track_list[track_index].path;
   curr_track.load();
-  curr_track.volume = 0.1;  
-  volume_slider.value = 10; 
+  curr_track.volume = 0.1;
+  volume_slider.value = 10;
 
   track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
   track_name.textContent = track_list[track_index].name;
   track_artist.textContent = track_list[track_index].artist;
   now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
 
-  
+
 
   updateTimer = setInterval(seekUpdate, 1000);
   curr_track.addEventListener("ended", nextTrack);

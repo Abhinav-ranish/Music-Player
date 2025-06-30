@@ -17,6 +17,42 @@ let curr_track = document.createElement('audio');
 
 // Track list
 let track_list = [
+      {
+    name: "Wake Me Up",
+    artist: "Avicii",
+    image: "Music/Covers/wakemeup.png",
+    path: "Music/Wake Me Up.flac"
+  },
+  {
+    name: "Yeat",
+    artist: "Yeat",
+    image: "Music/Covers/yeat.jpg",
+    path: "Music/yeat.mp3"
+  },
+  {
+    name: "Alors On Danse",
+    artist: "Stromae",
+    image: "Music/Covers/alors.jpg",
+    path: "Music/Alors On Danse.flac"
+  },
+  {
+    name: "If We Being Real",
+    artist: "YoungBoy Never Broke Again",
+    image: "Music/Covers/skai.webp",
+    path: "Music/If We Being Real.flac"
+  },
+  {
+    name: "Radio",
+    artist: "Lana Del Rey",
+    image: "Music/Covers/lana.jpg",
+    path: "Music/Radio - Lana.flac"
+  },
+  {
+    name: "SKAI",
+    artist: "Unknown",
+    image: "Music/Covers/skai.webp",
+    path: "Music/SKAI.flac"
+  },
     {
         name: "Con te Partiro",
         artist: "Ludig",
@@ -70,12 +106,12 @@ function loadTrack(track_index) {
     if (trackNameLink) {
         trackNameLink.textContent = track_list[track_index].name;
         // Optionally update the href if it should be dynamic based on the track
-        trackNameLink.href = "https://music.aranish.codes"; // Modify this URL as needed
+        trackNameLink.href = "https://music.aranish.uk"; // Modify this URL as needed
     } else {
         // If the <a> element does not exist, create it
         track_name.innerHTML = '';
         trackNameLink = document.createElement('a');
-        trackNameLink.href = "https://music.aranish.codes"; // Set the initial URL
+        trackNameLink.href = "https://music.aranish.uk"; // Set the initial URL
         trackNameLink.textContent = track_list[track_index].name;
         trackNameLink.target = "_blank";
         track_name.appendChild(trackNameLink);
