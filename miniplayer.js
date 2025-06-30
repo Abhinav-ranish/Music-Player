@@ -17,36 +17,31 @@ let curr_track = document.createElement('audio');
 
 // Track list
 let track_list = [
-  {
-    name: "Yeat",
-    artist: "Yeat",
-    image: "Music/Covers/yeat.jpg",
-    path: "Music/yeat.mp3"
-  },
-  {
-    name: "Alors On Danse",
-    artist: "Stromae",
-    image: "Music/Covers/alors.jpg",
-    path: "Music/Alors On Danse.mp3"
-  },
-  {
-    name: "If We Being Real",
-    artist: "YoungBoy Never Broke Again",
-    image: "Music/Covers/skai.webp",
-    path: "Music/If We Being Real.mp3"
-  },
-  {
-    name: "Radio",
-    artist: "Lana Del Rey",
-    image: "Music/Covers/lana.jpg",
-    path: "Music/Radio - Lana.mp3"
-  },
-  {
-    name: "SKAI",
-    artist: "Unknown",
-    image: "Music/Covers/skai.webp",
-    path: "Music/SKAI.mp3"
-  },
+    {
+        name: "Yeat",
+        artist: "Yeat",
+        image: "Music/Covers/yeat.jpg",
+        path: "Music/yeat.mp3"
+    },
+    {
+        name: "Alors On Danse",
+        artist: "Stromae",
+        image: "Music/Covers/alors.jpg",
+        path: "Music/Alors On Danse.mp3"
+    },
+    {
+        name: "八方来财·因果",
+        artist: "SKAI ISYOURGOD",
+        image: "Music/Covers/skai.webp",
+        path: "Music/SKAI.mp3"
+    },
+    {
+        name: "Radio",
+        artist: "Lana Del Rey",
+        image: "Music/Covers/lana.jpg",
+        path: "Music/Radio - Lana.mp3"
+    },
+
     {
         name: "Con te Partiro",
         artist: "Ludig",
@@ -77,7 +72,7 @@ let track_list = [
         image: "Music/Covers/savage-love.jpeg",
         path: "Music/Savage Love.mp3"
     },
-];  
+];
 
 // Load a track based on the track_index
 function loadTrack(track_index) {
@@ -86,10 +81,10 @@ function loadTrack(track_index) {
     curr_track.src = track_list[track_index].path;
     curr_track.load();
 
-    curr_track.volume = 0.1;  
+    curr_track.volume = 0.1;
 
     // Update track details
-    track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";    
+    track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
     let trackNameLink = track_name.querySelector("a");
     if (trackNameLink) {
         trackNameLink.textContent = track_list[track_index].name;

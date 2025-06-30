@@ -34,22 +34,16 @@ let track_list = [
     path: "Music/Alors On Danse.mp3"
   },
   {
-    name: "If We Being Real",
-    artist: "YoungBoy Never Broke Again",
+    name: "八方来财·因果",
+    artist: "SKAI ISYOURGOD",
     image: "Music/Covers/skai.webp",
-    path: "Music/If We Being Real.mp3"
+    path: "Music/SKAI.mp3"
   },
   {
     name: "Radio",
     artist: "Lana Del Rey",
     image: "Music/Covers/lana.jpg",
     path: "Music/Radio - Lana.mp3"
-  },
-  {
-    name: "SKAI",
-    artist: "Unknown",
-    image: "Music/Covers/skai.webp",
-    path: "Music/SKAI.mp3"
   },
   {
     name: "Con te Partiro",
