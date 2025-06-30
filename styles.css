@@ -106,7 +106,7 @@ a{
 .volume-slider::-webkit-slider-thumb {
     width: 10px;
     height: 10px;
-    background: #1db954;
+    background: pink;
     border-radius: 50%;
     cursor: pointer;
 }
