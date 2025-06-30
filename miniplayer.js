@@ -17,12 +17,6 @@ let curr_track = document.createElement('audio');
 
 // Track list
 let track_list = [
-      {
-    name: "Wake Me Up",
-    artist: "Avicii",
-    image: "Music/Covers/wakemeup.png",
-    path: "Music/Wake Me Up.flac"
-  },
   {
     name: "Yeat",
     artist: "Yeat",
@@ -33,37 +27,31 @@ let track_list = [
     name: "Alors On Danse",
     artist: "Stromae",
     image: "Music/Covers/alors.jpg",
-    path: "Music/Alors On Danse.flac"
+    path: "Music/Alors On Danse.mp3"
   },
   {
     name: "If We Being Real",
     artist: "YoungBoy Never Broke Again",
     image: "Music/Covers/skai.webp",
-    path: "Music/If We Being Real.flac"
+    path: "Music/If We Being Real.mp3"
   },
   {
     name: "Radio",
     artist: "Lana Del Rey",
     image: "Music/Covers/lana.jpg",
-    path: "Music/Radio - Lana.flac"
+    path: "Music/Radio - Lana.mp3"
   },
   {
     name: "SKAI",
     artist: "Unknown",
     image: "Music/Covers/skai.webp",
-    path: "Music/SKAI.flac"
+    path: "Music/SKAI.mp3"
   },
     {
         name: "Con te Partiro",
         artist: "Ludig",
         image: "Music/Covers/ludwig.jpg",
         path: "Music/Ludwig - Con te partiro.mp3"
-    },
-    {
-        name: "Bella Ciao",
-        artist: "El Profesor",
-        image: "Music/Covers/BellaCiao.jpg",
-        path: "Music/bella ciao.mp3"
     },
     {
         name: "Islands (kompa pasión)",
