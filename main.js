@@ -52,12 +52,6 @@ let track_list = [
     path: "Music/Ludwig - Con te partiro.mp3"
   },
   {
-    name: "Islands (kompa pasión)",
-    artist: "Tomo, Frozy",
-    image: "Music/Covers/islands.jpg",
-    path: "Music/islands.mp3"
-  },
-  {
     name: "Snowfall",
     artist: "øneheart x reidenshi",
     image: "Music/Covers/snowfall.jpeg",

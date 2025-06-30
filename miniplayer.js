@@ -18,8 +18,14 @@ let curr_track = document.createElement('audio');
 // Track list
 let track_list = [
     {
-        name: "Yeat",
-        artist: "Yeat",
+        name: "八方来财·因果",
+        artist: "SKAI ISYOURGOD",
+        image: "Music/Covers/skai.webp",
+        path: "Music/SKAI.mp3"
+    },
+    {
+        name: "Yeat ",
+        artist: "Yeat ",
         image: "Music/Covers/yeat.jpg",
         path: "Music/yeat.mp3"
     },
@@ -28,12 +34,6 @@ let track_list = [
         artist: "Stromae",
         image: "Music/Covers/alors.jpg",
         path: "Music/Alors On Danse.mp3"
-    },
-    {
-        name: "八方来财·因果",
-        artist: "SKAI ISYOURGOD",
-        image: "Music/Covers/skai.webp",
-        path: "Music/SKAI.mp3"
     },
     {
         name: "Radio",
@@ -47,12 +47,6 @@ let track_list = [
         artist: "Ludig",
         image: "Music/Covers/ludwig.jpg",
         path: "Music/Ludwig - Con te partiro.mp3"
-    },
-    {
-        name: "Islands (kompa pasión)",
-        artist: "Tomo, Frozy",
-        image: "Music/Covers/islands.jpg",
-        path: "Music/islands.mp3"
     },
     {
         name: "Snowfall",
